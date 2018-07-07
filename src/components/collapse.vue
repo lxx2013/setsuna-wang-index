@@ -39,34 +39,33 @@
 		Bilibili 投稿
 	</span>
 	<el-row id="bilibili">
-	 		<el-col v-for="item,_index in ImageData" :span="ImageData.length>1?12:24" :key="_index">		
-	 			<bilibili-item  :item="item"></bilibili-item>
+		<el-col v-for="item,_index in ImageData" :span="ImageData.length>1?12:24" :key="_index">		
+				 <bilibili-item  :item="item"></bilibili-item>
 		</el-col>
 	</el-row>
 	</el-collapse-item>
 </el-collapse>
 </template>
 <script>
-	/* eslint-disable */
-	import BilibiliItem from "./bilibili-item";
-	import ImageData from "./image-data.js";
-	export default {
-		components: {
-			BilibiliItem
-		},
-		data() {
-			return {
-				activeNames: ["4"],
-				ImageData: ImageData
-			};
-		},
-		methods: {
-			handleChange(val) {
-				console.log(val);
-			}
+/* eslint-disable */
+import BilibiliItem from "./bilibili-item";
+import ImageData from "./image-data.js";
+export default {
+	components: {
+		BilibiliItem
+	},
+	data() {
+		return {
+			activeNames: ["4"],
+			ImageData: ImageData
+		};
+	},
+	methods: {
+		handleChange(val) {
+			console.log(val);
 		}
-	};
-
+	}
+};
 </script>
 <style lang="less" scoped>
 	.header-icon {
@@ -75,5 +74,4 @@
 			transform: translateY(2px);
 		}
 	}
-
 </style>
