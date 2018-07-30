@@ -1,4 +1,5 @@
 module.exports = {
     baseUrl: './',
-    outputDir:"docs/"
+    outputDir:"docs/",
+    lintOnSave: false
 }
