@@ -34,7 +34,7 @@
 	<el-collapse-item name="4">
 	<span slot="title">
 		<i class="header-icon">
-			<img src="http://static.hdslb.com/images/favicon.ico">
+			<img src="https://static.hdslb.com/images/favicon.ico">
 		</i>
 		Bilibili 投稿
 	</span>
