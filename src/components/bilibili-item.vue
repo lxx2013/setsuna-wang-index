@@ -5,7 +5,7 @@
 		<span class="length">05:32</span>
 		<span class="i-watchlater"></span>
 	</a>
-	<a :href="item.href" target="_blank" title="星の奏でる歌-吉他(附谱)" class="title">{{item.title}}</a>
+	<a :href="item.href" target="_blank" :title="item.title" class="title">{{item.title}}</a>
 	<div class="meta">
 		<span class="play"><i class="icon"></i>{{item.number}}</span>
 		<span class="time"><i class="icon"></i>{{item.time}}</span>

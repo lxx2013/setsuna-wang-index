@@ -1,13 +1,13 @@
 <template>
-<el-collapse v-model="activeNames" @change="handleChange" accordion>
+<el-collapse v-model = "activeNames" @change="handleChange" accordion>
 	<el-collapse-item title="" name="1">
 		<span slot="title">
 		<i class="header-icon">
-	<img src="https://assets-cdn.github.com/favicon.ico">
+	<img src="https://assets-cdn.github.com/favicon.ico" >
 		</i>
 			Github 项目
 		</span>
-		<div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
+		<div>{{DoubleactiveNames}}</div>
 		<div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
 	</el-collapse-item>
 	<el-collapse-item name="2">
@@ -39,7 +39,7 @@
 		Bilibili 投稿
 	</span>
 	<el-row id="bilibili">
-		<el-col v-for="item,_index in ImageData" :span="ImageData.length>1?12:24" :key="_index">		
+		<el-col v-for="(item,_index) in ImageData" :span="ImageData.length>1?12:24" :key="_index">		
 				 <bilibili-item  :item="item"></bilibili-item>
 		</el-col>
 	</el-row>
@@ -50,15 +50,23 @@
 /* eslint-disable */
 import BilibiliItem from "./bilibili-item";
 import ImageData from "./image-data.js";
+import { mapState,mapGetters } from 'vuex'
 export default {
 	components: {
 		BilibiliItem
 	},
 	data() {
 		return {
-			activeNames: ["4"],
 			ImageData: ImageData
 		};
+	},
+	computed:{
+		...mapState([
+			'activeNames'
+		]),
+		...mapGetters([
+			'DoubleactiveNames'
+		])
 	},
 	methods: {
 		handleChange(val) {

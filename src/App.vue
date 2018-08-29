@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <img id="avatar" src="https://avatars2.githubusercontent.com/u/20529542">
+  <img id="avatar" src="https://avatars2.githubusercontent.com/u/20529542" >
   <el-row id="collapse">
 <el-col :span="24"><Collapse></Collapse></el-col>
 </el-row>
