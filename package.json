@@ -1,52 +1,29 @@
 {
-  "name": "setsuna-wang-index",
-  "version": "0.1.0",
+  "name": "nuxt",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "lxx.imac <lxx2013@mail.ustc.edu.cn>",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
   "dependencies": {
-    "element-ui": "^2.4.2",
-    "less": "^3.0.4",
+    "element-ui": "^2.4.6",
+    "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "vue": "^2.5.16",
-    "vuex": "^3.0.1"
+    "nuxt": "^1.0.0",
+    "vue-style-loader": "^4.1.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.16",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.16",
-    "@vue/cli-service": "^3.0.0-beta.16",
-    "vue-template-compiler": "^2.5.16"
-  },
-  "babel": {
-    "presets": [
-      "@vue/app"
-    ]
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
 }

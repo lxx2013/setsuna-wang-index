@@ -4,7 +4,7 @@ import Vue from 'vue'
 import imageData from "./image-data"
 console.log(imageData)
 Vue.use(Vuex)
-var store = new Vuex.Store({
+var store = ()=> new Vuex.Store({
   state:{
     text:'what is vuex',
     imageData

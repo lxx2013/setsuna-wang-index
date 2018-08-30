@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Collapse from "./components/collapse"
+import Collapse from "../components/collapse"
 export default {
   name: 'app',
   components: {

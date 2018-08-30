@@ -104,7 +104,7 @@
 		bottom: 0;
 	}
 	.icon {
-		background-image: url(../assets/icons.png);
+		background-image: url(/icons.png);
 		display: inline-block;
 	}
 	.play .icon{
