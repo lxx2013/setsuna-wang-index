@@ -7,7 +7,6 @@
 		</i>
 			Github 项目
 		</span>
-		<div>{{DoubleactiveNames}}</div>
 		<div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
 	</el-collapse-item>
 	<el-collapse-item name="2">
@@ -32,14 +31,14 @@
 		<div>帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。</div>
 	</el-collapse-item>
 	<el-collapse-item name="4">
-	<span slot="title">
+	<span slot="title" >
 		<i class="header-icon">
 			<img src="https://static.hdslb.com/images/favicon.ico">
 		</i>
 		Bilibili 投稿
 	</span>
-	<el-row id="bilibili">
-		<el-col v-for="(item,_index) in ImageData" :span="ImageData.length>1?12:24" :key="_index">		
+	<el-row id="bilibili"  >
+		<el-col v-for="(item,_index) in imageData" :span="imageData.length>1?12:24" :key="_index">		
 				 <bilibili-item  :item="item"></bilibili-item>
 		</el-col>
 	</el-row>
@@ -49,7 +48,6 @@
 <script>
 /* eslint-disable */
 import BilibiliItem from "./bilibili-item";
-import ImageData from "./image-data.js";
 import { mapState,mapGetters } from 'vuex'
 export default {
 	components: {
@@ -57,22 +55,19 @@ export default {
 	},
 	data() {
 		return {
-			ImageData: ImageData
+			activeNames:'1'
 		};
 	},
 	computed:{
 		...mapState([
-			'activeNames'
+			'imageData'
 		]),
-		...mapGetters([
-			'DoubleactiveNames'
-		])
 	},
 	methods: {
 		handleChange(val) {
 			console.log(val);
 		}
-	}
+	},
 };
 </script>
 <style lang="less" scoped>

@@ -2,7 +2,7 @@
 <div class="small-item fakeDanmu-item">
 	<a :href="item.href" target="_blank" class="cover">
 		<img :src="item.src" :alt="item.title">
-		<span class="length">05:32</span>
+		<span class="length">{{item.length}}</span>
 		<span class="i-watchlater"></span>
 	</a>
 	<a :href="item.href" target="_blank" :title="item.title" class="title">{{item.title}}</a>
@@ -14,7 +14,7 @@
 </template>
 <script>
 	export default {
-		name: 'HelloWorld',
+		name: 'Videos',
 		props: {
 		 	item:Object
 		},

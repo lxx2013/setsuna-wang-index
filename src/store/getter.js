@@ -1,3 +1,3 @@
 export default{
-    DoubleactiveNames:state => state.activeNames.toString()+ state.activeNames.toString()
+    image_data_string:state => state.imageData.toString()
 }
