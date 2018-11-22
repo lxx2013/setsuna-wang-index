@@ -4,7 +4,12 @@
   <el-row id="collapse">
 <el-col :span="24"><Collapse></Collapse></el-col>
 </el-row>
+<!--    公安备案信息-->
+    <div id="beian" style="width:300px;">
+                                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102000933" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">鄂公网安备 42011102000933号</p></a>
+    </div>
   </div>
+  
 </template>
 
 <script>
