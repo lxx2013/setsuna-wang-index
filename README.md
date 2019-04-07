@@ -1,3 +1,5 @@
+可以用 https://api.github.com/users/lxx2013/repos 获取 github 项目信息
+
 # nuxt
 
 > Nuxt.js project
